@@ -1,0 +1,21 @@
+node_modules
+.env
+.DS_Store
+
+# Hardhat files
+cache
+artifacts
+coverage.json
+coverage
+abi
+zkit
+
+# Typechain generated files
+generated-types
+
+# Hardhat migrate
+.storage.json
+circuits/test
+
+IdentityAuth.witness.json
+IdentityAuth.wtns

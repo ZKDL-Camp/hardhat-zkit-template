@@ -1,0 +1,25 @@
+name: setup
+
+description: setup
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
+
+    - name: Install packages
+      run: bun install
+      shell: bash
+
+    - name: Compile circuits
+      run: bun hardhat zkit make
+      shell: bash
+
+    - name: Generate verifiers
+      run: bun hardhat zkit verifiers
+      shell: bash
+
+    - name: Compile generated Sol verifiers
+      run: bun hardhat compile
+      shell: bash
